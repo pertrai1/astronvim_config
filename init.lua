@@ -7,7 +7,7 @@ local config = {
         "folke/tokyonight.nvim",
         as = "tokyonight"
       },
-    },
+    }
   },
   polish = function()
     require "user.core.autocmds"

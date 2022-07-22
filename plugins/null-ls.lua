@@ -10,25 +10,13 @@ if status_ok then
       -- builtins.completion.spell,
       -- Formatting
       builtins.formatting.shfmt, -- Shell
-      builtins.formatting.prettierd.with {
-        filetypes = {
-          "javascript",
-          "typescript",
-          "css",
-          "scss",
-          "html",
-          "yaml",
-          "markdown",
-          "json",
-          "svelte",
-          "toml",
-        },
-      },
+      builtins.formatting.prettier,
+      builtins.formatting.eslint,
       builtins.formatting.stylelint,
 
       -- Linters
       builtins.diagnostics.rubocop, -- Ruby
-      builtins.diagnostics.eslint_d,
+      builtins.diagnostics.eslint,
       builtins.diagnostics.flake8,
       builtins.diagnostics.markdownlint,
       builtins.diagnostics.pylint,
@@ -38,7 +26,7 @@ if status_ok then
         diagnostics_format = "#{m} [#{c}]",
       },
       -- Code Actions
-      builtins.code_actions.eslint_d,
+      builtins.code_actions.eslint,
       builtins.code_actions.gitsigns,
       builtins.code_actions.gitrebase,
       builtins.code_actions.shellcheck,
